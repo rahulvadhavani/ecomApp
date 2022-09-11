@@ -1,5 +1,7 @@
 # ecomApp
 
+Basic admin and user authentication using laravel Breeze and Product crud and add to cart functionality with tailwind css
+
 ## Features
 
 - Admin authentication 
