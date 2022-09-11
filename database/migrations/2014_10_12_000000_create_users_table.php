@@ -25,7 +25,7 @@ return new class extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
-        User::table('users')->insert([
+        User::create([
             'name' => 'admin',
             'role' => User::ROLEADMIN,
             'email' => 'admin@gmail.com',

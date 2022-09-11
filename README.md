@@ -14,6 +14,7 @@
 ### =>clone this repo and install composer and setup env
 ```bash
 composer install
+php artisan key:generate
 ```
  
 ### =>Install Breeze Authentication
