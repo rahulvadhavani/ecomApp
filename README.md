@@ -40,3 +40,13 @@ npm run dev
 php artisan serve
 ```
     
+
+
+## Screenshots
+
+![App Screenshot]('./public/images/userhome.png')
+![App Screenshot]('./public/images/cart.png')
+![App Screenshot]('./public/images/admin_products.png')
+![App Screenshot]('./public/images/add_product.png')
+
+
