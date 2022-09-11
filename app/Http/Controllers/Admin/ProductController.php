@@ -42,11 +42,11 @@ class ProductController extends Controller
         $postData['user_id'] = auth()->user()->id;
         if($request->image && $request->image != null){
             $imageName = time().'.'.$request->image->extension(); 
-            $request->image->move(public_path('product/images'), $imageName);
+            $request->image->move(public_path(Product::IMAGEPATH), $imageName);
             $postData['image'] = $imageName;
         }
         Product::updateOrCreate(['id' => $request->id],$postData);
-        return redirect()->route('product.index')->with('message', 'Product Created Successfully');
+        return redirect()->route('product.index')->with('message','Product '.($request->id>0? 'Updated': 'Created').' Successfully');
     }
 
     /**
@@ -80,7 +80,9 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
+        $productImg = $product->image;
         $product->delete();
+        unlink(public_path(Product::IMAGEPATH.'/'.basename($productImg)));
         return redirect()->route('product.index')->with('message', 'Product Deleted Successfully');
     }
 }

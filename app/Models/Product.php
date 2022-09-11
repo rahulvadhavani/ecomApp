@@ -16,7 +16,7 @@ class Product extends Model
         'image',
         'user_id'
     ];
-    const IMAGEPATH = 'product/images';
+    const IMAGEPATH = 'images/product';
 
     protected function image(): Attribute
     {
