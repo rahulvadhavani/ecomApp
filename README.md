@@ -18,11 +18,6 @@ Basic admin and user authentication using laravel Breeze and Product crud and ad
 composer install
 php artisan key:generate
 ```
- 
-### =>Install Breeze Authentication
-```bash
-php artisan breeze:install
-```
     
 ### =>Migrate Database
 ```bash
